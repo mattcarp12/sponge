@@ -50,7 +50,7 @@ size_t ByteStream::write(const string &data) {
 //! \param[in] len bytes will be copied from the output side of the buffer
 string ByteStream::peek_output(const size_t len) const {
   string temp;
-  for (size_t i = 0; i < len; i++) {
+  for (size_t i = 0; i < min(buffer.size(), len); i++) {
     temp += buffer[i];
   }
   return temp;
