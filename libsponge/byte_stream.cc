@@ -21,7 +21,6 @@ using namespace std;
 ByteStream::ByteStream(const size_t cap)
     : buffer(),
       capacity(cap),
-      size(0),
       num_bytes_written(0),
       num_bytes_read(0),
       ended(false),

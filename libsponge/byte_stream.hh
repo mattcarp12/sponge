@@ -18,7 +18,6 @@ class ByteStream {
     // Your code here -- add private members as necessary.
     std::deque<char> buffer;
     size_t capacity;
-    size_t size;
     size_t num_bytes_written;
     size_t num_bytes_read;
 

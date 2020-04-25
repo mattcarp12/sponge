@@ -15,7 +15,7 @@ using namespace std;
 
 StreamReassembler::StreamReassembler(const size_t capacity)
     : _output(capacity),
-      _capacity(capacity),
+      //_capacity(capacity),
       unassembled_segments(),
       last_assembled_byte(-1),
       eof_received(false),
@@ -96,6 +96,6 @@ bool operator<(const Segment &A, const Segment &B) {
 }
 
 bool Segment::contains(const Segment &segment) const {
-  return (segment.index >= this->index) &&
-         (segment.last_index() <= this->last_index());
+  return (segment.index >= index) &&
+         (segment.last_index() <= last_index());
 }
